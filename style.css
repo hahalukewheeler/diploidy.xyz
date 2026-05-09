@@ -1,6 +1,6 @@
 body {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background-color: black;
   color: white;
   font-family: Times New Roman, serif;
@@ -49,6 +49,100 @@ a {
 a:hover {
   background: white;
   color: black;
+}
+
+.serbuk-page {
+  overflow-y: hidden;
+}
+
+.serbuk-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.serbuk-link img {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.serbuk-link:hover img {
+  filter: brightness(1.2);
+}
+
+.spotify-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.spotify-link img {
+  display: block;
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+}
+
+.spotify-link:hover img {
+  filter: brightness(1.2);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 24px;
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 10px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.gallery figure {
+  margin: 0;
+  min-width: 320px;
+  flex: 0 0 320px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.gallery-back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+  z-index: 2;
+}
+
+.gallery-back a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.gallery-back a:hover {
+  text-decoration: none;
+}
+
+.gallery-back img {
+  width: 72px;
+  height: auto;
+  display: block;
 }
 
 h1 {
